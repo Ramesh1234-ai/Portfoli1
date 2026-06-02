@@ -1,10 +1,18 @@
-:root{
-  --background:#fff;
+:root {
+  --background: #fff;
   --foreground: #171717;
-  --gradient-shine:#000;
+  --gradient-shine: #000;
   --bg-gradient-2: #ffeda6;
   --bg-gradient-1: #ffd07e;
 }
-html, body, #root {
+html,
+body,
+#root {
   background: var(--background);
+}
+.separator {
+  height: 1px;
+  background-color: #d1d5db;
+  width: 100%;
+  margin: 0;
 }

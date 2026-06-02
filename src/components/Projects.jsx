@@ -1,27 +1,511 @@
-export function Project() {
+import { Reveal } from "./Reveal";
+import { color, motion } from "framer-motion";
+import { DARK, LIGHT } from "./Theme";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaAws,
+  FaGit,
+  FaEnvelope,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaJava,
+  FaLinux,
+} from "react-icons/fa";
+
+import {
+  SiMongodb,
+  SiPython,
+  SiOpenai,
+  SiTypescript,
+  SiTailwindcss,
+  SiFramer,
+  SiThreedotjs,
+  SiFigma,
+  SiVercel,
+  SiFlask,
+  SiJavascript,
+  SiRender,
+  SiNextdotjs,
+  SiExpress,
+  SiMysql,
+  SiClaude,
+  SiVite,
+  SiNpm,
+  SiPostgresql,
+  SiRedis,
+  SiNginx,
+  SiGithubactions,
+  SiCloudflare,
+  SiGo,
+  SiElixir,
+  SiApachekafka,
+  SiKubernetes,
+  SiClerk,
+} from "react-icons/si";
+export function Work({ theme: t = DARK } = {}) {
+  const [visibleCount, setVisibleCount] = useState(3);
+  // Tech logo mapping
+  const TECH_LOGOS = {
+    React: (
+      <FaReact
+        size={10}
+        style={{
+          color: "#61dafb",
+        }}
+      />
+    ),
+    Express: (
+      <SiExpress
+        size={10}
+        style={{
+          color: "#000",
+        }}
+      />
+    ),
+    "Node.js": (
+      <FaNodeJs
+        size={10}
+        style={{
+          color: "#3c873a",
+        }}
+      />
+    ),
+    MongoDB: (
+      <SiMongodb
+        size={10}
+        style={{
+          color: "#47a248",
+        }}
+      />
+    ),
+    Clerk: (
+      <SiClerk
+        size={10}
+        style={{
+          color: "#fff",
+        }}
+      />
+    ),
+    Flask: (
+      <SiFlask
+        size={10}
+        style={{
+          color: "#fff",
+        }}
+      />
+    ),
+    MySql: (
+      <SiMysql
+        size={10}
+        style={{
+          color: "#fff",
+        }}
+      />
+    ),
+    TailwindCSS: (
+      <SiTailwindcss
+        size={10}
+        style={{
+          color: "#38bdf8",
+        }}
+      />
+    ),
+    JS: (
+      <SiJavascript
+        size={10}
+        style={{
+          color: "#fff",
+        }}
+      />
+    ),
+    CSS3: "🎨",
+    HTML5: "🏗️",
+    FLASK: "🐍",
+    Mysql: "🗄️",
+    Firebase: "🔥",
+  };
+
+  const PROJECTS = [
+    {
+      title: "FinanCinno",
+      subtitle: "Expense Tracker Management System",
+      desc: "Integrated an AI-powered chatbot to provide personalized financial advice Built budget tracking features allowing users to monitor financial goals",
+      image:
+        "https://images.unsplash.com/photo-1554224311-beee415c15a7?w=600&h=400&fit=crop",
+      tech: ["React", "Express", "Node.js", "MongoDB", "Clerk"],
+      category: "Fullstack",
+      status: "Live",
+      color: "#6366f1",
+      featured: true,
+      liveUrl: "https://finan-cino.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/Financcino",
+    },
+    {
+      title: "Huzz",
+      desc: "Developed a player analytics platform with secure authentication,Implemented deck analysis algorithms for gameplay optimization,Get real-time deck analysis with detailed metrics and insights.",
+      image:
+        "https://images.unsplash.com/photo-1611161617213-7d7a39e9b1d7?w=600&h=400&fit=crop",
+      tech: ["React", "Flask", "MySql", "TailwindCSS"],
+      category: "FullStack",
+      status: "Ready to Ship",
+      color: "#c8622a",
+      featured: true,
+      liveUrl: "https://deploysus.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/clash_royale",
+    },
+    {
+      title: "StreamFlow",
+      desc: "Connecting creators and audiences in real-time through seamless, ultra-low-latency streaming  built for anyone, anywhere.",
+      image:
+        "https://images.unsplash.com/photo-1598045866362-c8727905fc0b?w=600&h=400&fit=crop",
+      tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
+      category: "Fullstack",
+      status: "In Dev",
+      color: "#3b5bdb",
+      featured: false,
+      liveUrl: "https://echo-rizz.vercel.app/",
+      githubUrl: "https://github.com/ramesh1234-ai/bookish-spork",
+    },
+    {
+      title: "Velora Gallery",
+      subtitle: "Image Gallery Platform",
+      desc: "Modern image gallery with advanced filtering, collections management, and beautiful animations for seamless browsing.",
+      image:
+        "https://images.unsplash.com/photo-1551258221-acbcd5c6f31f?w=600&h=400&fit=crop",
+      tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS"],
+      category: "Fullstack",
+      status: "Ready to Ship",
+      color: "#8b5cf6",
+      featured: false,
+      liveUrl: "https://velora-gallery.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/velora",
+    },
+  ];
+
   return (
     <section
+      id="work"
       style={{
         padding: "80px 20px",
-        position: "relative",
-        overflow: "hidden",
         display: "flex",
         alignItems: "center",
       }}
     >
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <Reveal>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: 72,
+              flexWrap: "wrap",
+              gap: 24,
+            }}
+          >
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: 8,
+                  alignContent: "center",
+                  marginBottom: 16,
+                  justifyContent: "center",
+                }}
+              ></div>
+              <h2
+                style={{
+                  fontFamily: "'DM Serif Display',serif",
+                  fontSize: "clamp(2rem, 5vw, 4rem)",
+                  fontWeight: 400,
+                  color: t.text,
+                  letterSpacing: "-0.02em",
+                  margin: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <em style={{ color: t.accent, fontStyle: "italic" }}>
+                  Projects
+                </em>
+              </h2>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* All Projects Grid */}
         <div
-        style={{
-            display:"flex",
-            alignItems:"center",
-            marginBottom:"72 px"
-        }}>
-           H 
+          className="all-projects-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: 24,
+            marginBottom: 48,
+          }}
+        >
+          <AnimatePresence mode="popLayout">
+            {PROJECTS.slice(0, visibleCount).map((p, i) => (
+              <motion.div
+                key={p.title}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+                whileHover={{ y: -6 }}
+                style={{
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+                  background: t.surface,
+                  border: `1px solid ${t.border}`,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = p.color + "66";
+                  e.currentTarget.style.boxShadow = `0 12px 32px ${p.color}20`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = t.border;
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 24px rgba(0,0,0,0.1)";
+                }}
+              >
+                {/* Project Image */}
+                <div
+                  style={{
+                    height: 180,
+                    background: `linear-gradient(135deg, ${p.color}25, ${p.color}08)`,
+                    backgroundImage: `url('${p.image}')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  {/* Overlay */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: `linear-gradient(135deg, ${p.color}35, ${p.color}20)`,
+                    }}
+                  />
+                  {/* Status Badge */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 12,
+                      right: 12,
+                      padding: "4px 12px",
+                      borderRadius: 999,
+                      background: `${p.color}20`,
+                      border: `1px solid ${p.color}40`,
+                      color: p.color,
+                      fontFamily: "'Space Mono',monospace",
+                      fontSize: 9,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {p.status}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  style={{
+                    padding: "16px",
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div
+                    style={{
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "'DM Serif Display',serif",
+                        fontSize: "1.1rem",
+                        color: t.text,
+                        margin: "0 0 4px",
+                        fontWeight: 400,
+                      }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: "'DM Serif Display',serif",
+                        fontSize: "0.70rem",
+                        color: t.muted,
+                        lineHeight: 1.5,
+                        margin: 0,
+                      }}
+                    >
+                      {p.desc}
+                    </p>
+                  </div>
+
+                  {/* Tech Logos */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: 8,
+                      marginTop: 12,
+                      paddingTop: 12,
+                      borderTop: `1px solid ${t.border}`,
+                    }}
+                  >
+                    {p.tech.map((tech) => (
+                      <div
+                        key={tech}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 4,
+                          padding: "3px 8px",
+                          borderRadius: 6,
+                          background: t.surfaceAlt,
+                          border: `1px solid ${t.border}`,
+                        }}
+                        title={tech}
+                      >
+                        <span style={{ fontSize: "0.9rem" }}>
+                          {TECH_LOGOS[tech] || "⚙️"}
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: "'Space Mono',monospace",
+                            fontSize: 8,
+                            color: t.muted,
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 12,
+                      marginTop: 12,
+                      paddingTop: 12,
+                      borderTop: `1px solid ${t.border}`,
+                    }}
+                  >
+                    <motion.a
+                      href={p.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 2 }}
+                      style={{
+                        fontFamily: "'Space Mono',monospace",
+                        fontSize: 9,
+                        color: p.color,
+                        fontWeight: 700,
+                        letterSpacing: "0.08em",
+                        textDecoration: "none",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 3,
+                        cursor: "pointer",
+                      }}
+                    >
+                      <span>Live</span>
+                      <span>→</span>
+                    </motion.a>
+                    <motion.a
+                      href={p.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 2 }}
+                      style={{
+                        fontFamily: "'Space Mono',monospace",
+                        fontSize: 9,
+                        color: t.muted,
+                        letterSpacing: "0.08em",
+                        textDecoration: "none",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 3,
+                        cursor: "pointer",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <span>→</span>
+                    </motion.a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
-        <div
-        style={{
-            display:"flex",
-            alignItems:"center"
-        }}>desc</div>
+
+        {/* Show More Button */}
+        {visibleCount < PROJECTS.length && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              marginTop: 48,
+            }}
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setVisibleCount((prev) => prev + 3)}
+              style={{
+                padding: "12px 32px",
+                borderRadius: 8,
+                border: `2px solid ${t.accent}`,
+                background: `${t.accent}15`,
+                color: t.accent,
+                fontFamily: "'Space Mono',monospace",
+                fontSize: 12,
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = t.accent;
+                e.currentTarget.style.color = t.bg;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = `${t.accent}15`;
+                e.currentTarget.style.color = t.accent;
+              }}
+            >
+              Load More Projects ({PROJECTS.length - visibleCount} remaining)
+            </motion.button>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

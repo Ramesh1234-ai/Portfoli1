@@ -70,7 +70,7 @@ export function Skills({ theme: T, dark } = {}) {
       ],
     },
     {
-      category: "Data",
+      category: "DataBase",
       skills: [
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
         { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
