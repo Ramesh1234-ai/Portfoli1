@@ -152,31 +152,13 @@ export function Hero({ theme: T, dark } = {}) {
         <div
           style={{
             display: "flex",
-            gap: "16px",
+            gap: "1px",
             justifyContent: "center",
             alignItems: "center",
             flexWrap: "wrap",
           }}
         >
-          <HoverButton
-            style={{
-              padding: "2px 4px",
-              background: theme.text,
-              color: theme.bg,
-              border: "none",
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: 7,
-              fontWeight: 500,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.18)",
-              display: "flex",
-              border: "1.5px solid #0000",
-              borderRadius: "999px",
-            }}
-          >
-            View Work
-          </HoverButton>
+          <HoverButton>View Work</HoverButton>
           <MagButton
             style={{
               padding: "2px 4px",
@@ -195,18 +177,7 @@ export function Hero({ theme: T, dark } = {}) {
             Project
           </MagButton>
           <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              padding: "3px 6px",
-              style: "none",
-            }}
-          >
-            <FaXTwitter size={10} />
-          </a>
-          <a
-            href="https://twitter.com"
+            href="https://www.instagram.com/rishit_149"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -217,7 +188,7 @@ export function Hero({ theme: T, dark } = {}) {
             <FaInstagram size={10} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://discord.com/users/blackdevil345w"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -228,7 +199,7 @@ export function Hero({ theme: T, dark } = {}) {
             <FaDiscord size={10} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/rishit-sinha-6953ab363"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -239,7 +210,7 @@ export function Hero({ theme: T, dark } = {}) {
             <FaLinkedin size={10} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://github.com/Ramesh1234-ai"
             target="_blank"
             rel="noreferrer"
             style={{

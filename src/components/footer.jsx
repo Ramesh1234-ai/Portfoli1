@@ -38,7 +38,7 @@ export default function NavDock() {
           background: "rgba(255, 255, 255, 0.95)",
           backdropFilter: "blur(10px)",
           border: "1px solid #e5e7eb",
-          borderRadius: "40px",
+          borderRadius: "30px",
           padding: "3px 4px",
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
           transition: "all 0.3s ease",
@@ -58,7 +58,7 @@ export default function NavDock() {
             background: "linear-gradient(135deg, #E07845 0%, #ff9466 100%)",
             color: "#fff",
             fontWeight: "bold",
-            fontSize: "14px",
+            fontSize: "7px",
           }}
         >
           
@@ -73,9 +73,9 @@ export default function NavDock() {
             onMouseLeave={() => setHovered(null)}
             style={{
               position: "relative",
-              padding: "8px 16px",
-              fontSize: "14px",
-              fontWeight: 500,
+              padding: "2px 4px",
+              fontSize: "10px",
+              fontWeight: 600,
               border: "none",
               background: "transparent",
               cursor: "pointer",
