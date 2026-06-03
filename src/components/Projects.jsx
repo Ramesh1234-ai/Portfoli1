@@ -3,6 +3,9 @@ import { color, motion } from "framer-motion";
 import { DARK, LIGHT } from "./Theme";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import image from "../assets/image.png";
+import Huzz from "../assets/Huzz.png";
+import Stream from "../assets/Stream.png";
 import {
   FaReact,
   FaNodeJs,
@@ -124,11 +127,6 @@ export function Work({ theme: t = DARK } = {}) {
         }}
       />
     ),
-    CSS3: "🎨",
-    HTML5: "🏗️",
-    FLASK: "🐍",
-    Mysql: "🗄️",
-    Firebase: "🔥",
   };
 
   const PROJECTS = [
@@ -141,7 +139,7 @@ export function Work({ theme: t = DARK } = {}) {
       tech: ["React", "Express", "Node.js", "MongoDB", "Clerk"],
       category: "Fullstack",
       status: "Live",
-      color: "#6366f1",
+      image: image,
       featured: true,
       liveUrl: "https://finan-cino.vercel.app/",
       githubUrl: "https://github.com/Ramesh1234-ai/Financcino",
@@ -154,7 +152,7 @@ export function Work({ theme: t = DARK } = {}) {
       tech: ["React", "Flask", "MySql", "TailwindCSS"],
       category: "FullStack",
       status: "Ready to Ship",
-      color: "#c8622a",
+      image: Huzz,
       featured: true,
       liveUrl: "https://deploysus.vercel.app/",
       githubUrl: "https://github.com/Ramesh1234-ai/clash_royale",
@@ -167,7 +165,7 @@ export function Work({ theme: t = DARK } = {}) {
       tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
       category: "Fullstack",
       status: "In Dev",
-      color: "#3b5bdb",
+      image: Stream,
       featured: false,
       liveUrl: "https://echo-rizz.vercel.app/",
       githubUrl: "https://github.com/ramesh1234-ai/bookish-spork",
@@ -176,8 +174,7 @@ export function Work({ theme: t = DARK } = {}) {
       title: "Velora Gallery",
       subtitle: "Image Gallery Platform",
       desc: "Modern image gallery with advanced filtering, collections management, and beautiful animations for seamless browsing.",
-      image:
-        "https://images.unsplash.com/photo-1551258221-acbcd5c6f31f?w=600&h=400&fit=crop",
+      image: "../src/com",
       tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS"],
       category: "Fullstack",
       status: "Ready to Ship",

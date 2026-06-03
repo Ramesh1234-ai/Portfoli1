@@ -14,6 +14,7 @@ import { DARK, LIGHT } from "./Theme";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png"
+import { HoverButton } from "./HoverButton";
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
@@ -157,7 +158,7 @@ export function Hero({ theme: T, dark } = {}) {
             flexWrap: "wrap",
           }}
         >
-          <MagButton
+          <HoverButton
             style={{
               padding: "2px 4px",
               background: theme.text,
@@ -175,7 +176,7 @@ export function Hero({ theme: T, dark } = {}) {
             }}
           >
             View Work
-          </MagButton>
+          </HoverButton>
           <MagButton
             style={{
               padding: "2px 4px",

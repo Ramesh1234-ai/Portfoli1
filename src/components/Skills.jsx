@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { DARK, LIGHT } from "./Theme";
 import { Reveal } from "./Reveal";
 import {
@@ -44,6 +44,8 @@ import {
   SiElixir,
   SiApachekafka,
   SiKubernetes,
+  SiCss,
+  SiClerk,
 } from "react-icons/si";
 
 export function Skills({ theme: T, dark } = {}) {
@@ -52,6 +54,8 @@ export function Skills({ theme: T, dark } = {}) {
       category: "Languages",
       skills: [
         { name: "TypeScript", icon: <SiTypescript />, color: "#3178c6" },
+        { name: "JavaScript", icon: <SiJavascript />, color: "#fff200" },
+        { name: "Java", icon: <FaJava />, color: "#ff000094" },
       ],
     },
     {
@@ -60,6 +64,7 @@ export function Skills({ theme: T, dark } = {}) {
         { name: "React", icon: <FaReact />, color: "#61dafb" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38bdf8" },
+        { name: "VanilaCSS", icon: <SiCss />, color: "#a632a6" },
       ],
     },
     {
@@ -67,22 +72,23 @@ export function Skills({ theme: T, dark } = {}) {
       skills: [
         { name: "Node.js", icon: <FaNodeJs />, color: "#3c873a" },
         { name: "Express", icon: <SiExpress />, color: "#000" },
+        { name: "Flask", icon: <SiFlask />, color: "#848484" },
+        { name: "Next.js", icon: <SiNextdotjs />, color: "#000" },
       ],
     },
     {
       category: "DataBase",
       skills: [
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-        { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
+        { name: "MySQL", icon: <SiMysql />, color: "#336791" },
         { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
       ],
     },
     {
       category: "Cloud",
       skills: [
-        { name: "AWS", icon: <FaAws />, color: "#FF9900" },
-        { name: "Cloudflare", icon: <SiCloudflare />, color: "#F38020" },
+        { name: "Render", icon: <SiRender />, color: "#000" },
         { name: "Vercel", icon: <SiVercel />, color: "#000" },
+        { name: "Clerk", icon: <SiClerk />, color: "rgba(2, 204, 255, 0.4)" },
       ],
     },
   ];

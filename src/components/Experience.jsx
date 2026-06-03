@@ -1,40 +1,38 @@
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
 import { DARK, LIGHT } from "./Theme";
-
 export function Experience({ theme: t = DARK } = {}) {
   const EXPERIENCES = [
     {
       id: "01",
-      title: "Lead Software Engineer",
-      company: "NetPieDev",
+      title: "Full Stack Intern",
+      company: "NextLearn Technologies",
       type: "full-time",
-      period: "2025 - present",
+      period: "April 2026 - May 2026",
       description: [
-        "Led product strategy and roadmap for NetPieDev Software Solutions",
+        "Bulid A Responsive Web Application To Contrast With Other Devlopers To Reduce Latencey of System By 30%",
         "Collaborated with engineering and design teams to deliver product features",
       ],
     },
     {
       id: "02",
-      title: "Open Source Contributor",
-      company: "Various Projects",
+      title: "Full Stack Intern",
+      company: "Prodigy InfoTech",
       type: "open source",
-      period: "2023 - present",
+      period: "July 2025 - Aug 2025",
       description: [
-        "Built and maintained personal OSS tools used by the community",
-        "Contributed patches and features to upstream Linux tooling projects",
+        "Built a real-time chat application using Node.js, Express, and WebSockets with 20% more latencey Than Other System",
+        "Implemented secure authentication and message storage using MongoDB And Increases User By 20%",
       ],
     },
     {
       id: "03",
-      title: "Freelance Developer",
-      company: "Self-employed",
-      type: "freelance",
-      period: "2023 - present",
+      title: "Frontend Developer",
+      company: "OctaNet",
+      period: "May 2025 - July 2025",
       description: [
-        "Delivered full-stack web apps and backend services for clients",
-        "Worked across cloud infra setup, CI/CD pipelines, and API design",
+        "Implemented reusable UI components to maintain consistency across multiple pages.",
+        "Developed responsive UI components using React.js and Tailwind CSS to enhance user experience",
       ],
     },
   ];
