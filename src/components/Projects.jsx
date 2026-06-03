@@ -242,8 +242,9 @@ export function Work({ theme: t = DARK } = {}) {
           className="all-projects-grid"
           style={{
             display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
             gap: 24,
-            marginBottom: 48,
+            marginBottom: 24,
           }}
         >
           <AnimatePresence mode="popLayout">
