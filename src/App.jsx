@@ -6,19 +6,39 @@ import { Work } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Activity } from "./components/Activity";
 import { SiLeetcode } from "react-icons/si";
-import { FaDiscord, FaEnvelope, FaInstagram, FaLinkedin,FaGithub} from "react-icons/fa";
+import {
+  FaDiscord,
+  FaEnvelope,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import NavDock from "./components/footer";
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem("theme", !darkMode ? "dark" : "light");
+  };
+
   const Separator = ({ className = "" }) => (
-    <div className={`separator ${className}`} />
+    <div
+      className={`separator ${className}`}
+      style={{
+        borderColor: darkMode ? "#444" : "#e5e7eb",
+      }}
+    />
   );
   const currentYear = new Date().getFullYear();
   return (
     <div
       style={{
         position: "relative",
-        background: "#fff",
+        background: darkMode ? "#1a1a1a" : "#fff",
         minHeight: "100vh",
+        color: darkMode ? "#e5e7eb" : "#000",
+        transition: "background 0.3s ease, color 0.3s ease",
       }}
     >
       {/* Background gradient overlay */}
@@ -29,10 +49,6 @@ function App() {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `
-            radial-gradient(circle at center, #FFF991 0%, transparent 70%),
-            radial-gradient(circle at center, #8FFFB0, transparent)
-          `,
           opacity: 0.6,
           mixBlendMode: "multiply",
           pointerEvents: "none",
@@ -40,7 +56,7 @@ function App() {
         }}
       />
       <div style={{ position: "relative", zIndex: 1 }}>
-        <NavDock />
+        <NavDock darkMode={darkMode} toggleTheme={toggleTheme} />
         <Hero />
         <Separator />
         <Skills />
@@ -52,10 +68,11 @@ function App() {
         <Activity />
         <footer
           style={{
-            background: "#fafafa",
-            borderTop: "1px solid #e5e7eb",
+            background: darkMode ? "#0f0f0f" : "#fafafa",
+            borderTop: darkMode ? "1px solid #333" : "1px solid #e5e7eb",
             padding: "40px 20px",
             marginTop: "80px",
+            transition: "all 0.3s ease",
           }}
         >
           <div
@@ -72,19 +89,21 @@ function App() {
             <div>
               <p
                 style={{
-                  color: "#666",
+                  color: darkMode ? "#b0b0b0" : "#666",
                   fontSize: "14px",
                   margin: 0,
                   fontWeight: 500,
+                  transition: "color 0.3s ease",
                 }}
               >
                 © {currentYear} Ramesh. All rights reserved.
               </p>
               <p
                 style={{
-                  color: "#999",
+                  color: darkMode ? "#888" : "#999",
                   fontSize: "12px",
                   margin: "4px 0 0 0",
+                  transition: "color 0.3s ease",
                 }}
               >
                 Building systems that scale.
@@ -104,8 +123,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -115,8 +134,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
@@ -135,8 +156,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -146,8 +167,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
@@ -163,8 +186,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -174,8 +197,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
@@ -194,8 +219,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -205,8 +230,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
@@ -225,8 +252,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -236,8 +263,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
@@ -247,7 +276,7 @@ function App() {
                 href="https://leetcode.com/u/rizz4566/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="LeetCode"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -255,8 +284,8 @@ function App() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "8px",
-                  background: "#f0f0f0",
-                  color: "#171717",
+                  background: darkMode ? "#222" : "#f0f0f0",
+                  color: darkMode ? "#aaa" : "#171717",
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                 }}
@@ -266,8 +295,10 @@ function App() {
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#f0f0f0";
-                  e.currentTarget.style.color = "#171717";
+                  e.currentTarget.style.background = darkMode
+                    ? "#222"
+                    : "#f0f0f0";
+                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >

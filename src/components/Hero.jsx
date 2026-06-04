@@ -15,6 +15,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png"
 import { HoverButton } from "./HoverButton";
+import proof from "../assets/proof.png"
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
@@ -77,7 +78,7 @@ export function Hero({ theme: T, dark } = {}) {
           }}
         >
           <img
-            src={profilepic}
+            src={proof}
             style={{
               width: "40px",
               height: "40px",
@@ -158,7 +159,7 @@ export function Hero({ theme: T, dark } = {}) {
             flexWrap: "wrap",
           }}
         >
-          <HoverButton>View Work</HoverButton>
+          <HoverButton></HoverButton>
           <MagButton
             style={{
               padding: "2px 4px",

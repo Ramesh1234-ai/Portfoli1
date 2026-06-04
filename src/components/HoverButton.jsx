@@ -47,10 +47,9 @@ const StyledWrapper = styled.div`
   .btn-17 {
     border-radius: 99rem;
     border-width: 2px;
-    padding: 0.8rem 3rem;
+    padding: 0.6rem 1.8rem;
     z-index: 0;
   }
-
   .btn-17,
   .btn-17 .text-container {
     overflow: hidden;
