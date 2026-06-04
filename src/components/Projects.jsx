@@ -3,9 +3,9 @@ import { color, motion } from "framer-motion";
 import { DARK, LIGHT } from "./Theme";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import image from "../assets/image.png";
-import Huzz from "../assets/Huzz.png";
-import Stream from "../assets/Stream.png";
+import image from "../assets/image.avif";
+import Huzz from "../assets/Huzz.avif";
+import Stream from "../assets/Stream.avif";
 import {
   FaReact,
   FaNodeJs,
@@ -147,8 +147,6 @@ export function Work({ theme: t = DARK } = {}) {
     {
       title: "Huzz",
       desc: "Developed a player analytics platform with secure authentication,Implemented deck analysis algorithms for gameplay optimization,Get real-time deck analysis with detailed metrics and insights.",
-      image:
-        "https://images.unsplash.com/photo-1611161617213-7d7a39e9b1d7?w=600&h=400&fit=crop",
       tech: ["React", "Flask", "MySql", "TailwindCSS"],
       category: "FullStack",
       status: "Ready to Ship",
@@ -160,8 +158,6 @@ export function Work({ theme: t = DARK } = {}) {
     {
       title: "StreamFlow",
       desc: "Connecting creators and audiences in real-time through seamless, ultra-low-latency streaming  built for anyone, anywhere.",
-      image:
-        "https://images.unsplash.com/photo-1598045866362-c8727905fc0b?w=600&h=400&fit=crop",
       tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
       category: "Fullstack",
       status: "In Dev",

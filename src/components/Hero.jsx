@@ -15,7 +15,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png"
 import { HoverButton } from "./HoverButton";
-import proof from "../assets/proof.png"
+import proof from "../assets/proof.avif"
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);

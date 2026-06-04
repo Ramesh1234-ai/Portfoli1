@@ -1,5 +1,5 @@
 import { useState } from "react";
-import proof from "../assets/proof.png";
+import proof from "../assets/proof.avif";
 import profilepic from "../../src/assets/profile.png";
 const navItems = [
   { label: "Home", id: "home" },
@@ -12,7 +12,6 @@ const navItems = [
 export default function NavDock({ darkMode = false, toggleTheme = () => {} }) {
   const [activeItem, setActiveItem] = useState("home");
   const [hovered, setHovered] = useState(null);
-
   const scrollToSection = (id) => {
     setActiveItem(id);
     const element = document.getElementById(id);
