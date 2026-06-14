@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png";
+import { AsciiArtMatrixDemo } from "./contact";
 import { HoverButton } from "./HoverButton";
 import proof from "../assets/proof.avif";
 export function Hero({ theme: T, dark } = {}) {
