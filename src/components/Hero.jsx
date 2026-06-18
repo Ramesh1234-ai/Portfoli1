@@ -20,9 +20,9 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png";
-import { AsciiArtMatrixDemo } from "./contact";
 import { HoverButton } from "./HoverButton";
 import proof from "../assets/proof.avif";
+import AsciiProfile from "../assets/AsciiProfile.avif"
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
@@ -33,7 +33,7 @@ export function Hero({ theme: T, dark } = {}) {
   const scrambled = useScramble("Building Systems That Work", hovered);
   const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
-    "I Bulid Scalable Web System That Solve real world problems Javascript Devloper specializing in backend systems and frontend architecture Focused on performance, clean design, and production-ready code,",
+    "Full-stack engineer shipping production systems.design interfaces people love. Specializing in React, Node.js",
     30,
     800,
   );
@@ -69,7 +69,7 @@ export function Hero({ theme: T, dark } = {}) {
           zIndex: 1,
           maxWidth: 800,
           margin: "0 auto",
-          padding: "120 0px",
+          padding: "60px 20px",
           width: "100%",
           display: "flex",
           flexDirection: "column",

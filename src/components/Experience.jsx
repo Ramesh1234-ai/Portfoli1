@@ -9,8 +9,8 @@ export function Experience({ theme: t = DARK } = {}) {
       company: "OctaNet",
       period: "May 2025 - July 2025",
       description: [
-        "Implemented reusable UI components to maintain consistency across multiple pages.",
-        "Developed responsive UI components using React.js and Tailwind CSS to enhance user experience",
+        "Built responsive UI components using React.js and Tailwind CSS, achieving  component reusability across 12+ pages.",
+        "Implemented accessibility best practices (WCAG 2.1 AA), improving user engagement by reducing navigation friction.",
       ],
     },
     {
@@ -20,8 +20,8 @@ export function Experience({ theme: t = DARK } = {}) {
       type: "open source",
       period: "July 2025 - Aug 2025",
       description: [
-        "Built a real-time chat application using Node.js, Express, and WebSockets with 20% more latencey Than Other System",
-        "Implemented secure authentication and message storage using MongoDB And Increases User By 20%",
+        "Architected real-time chat application using Node.js, Express, and WebSockets",
+        "Implemented JWT-based authentication with MongoD",
       ],
     },
     {
@@ -31,8 +31,8 @@ export function Experience({ theme: t = DARK } = {}) {
       type: "full-time",
       period: "April 2026 - May 2026",
       description: [
-        "Bulid A Responsive Web Application To Contrast With Other Devlopers To Reduce Latencey of System By 30%",
-        "Collaborated with engineering and design teams to deliver product features",
+        "Designed and deployed responsive learning application with React + Node.js, reducing page load time by 65% (4.2s → 1.1s).",
+        "Collaborated with design and backend teams to deliver 8 product features on schedule",
       ],
     },
   ];

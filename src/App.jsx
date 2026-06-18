@@ -5,6 +5,7 @@ import { Experience } from "./components/Experience";
 import { Work } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Activity } from "./components/Activity";
+import { Contact } from "./components/contact";
 import { SiLeetcode } from "react-icons/si";
 import {
   FaDiscord,
@@ -66,6 +67,8 @@ function App() {
         <Work />
         <Separator />
         <Activity />
+        <Separator />
+        <Contact theme={darkMode ? { text: "#e5e7eb", accent: "#c084fc", border: "#2e303a", background: "#1a1a1a", surface: "#222" } : { text: "#000", accent: "#E07845", border: "#e5e7eb", background: "#fff", surface: "#fafafa" }} />
         <footer
           style={{
             background: darkMode ? "#0f0f0f" : "#fafafa",

@@ -65,7 +65,7 @@ export function Skills({ theme: T, dark } = {}) {
         { name: "React", icon: <FaReact />, color: "#61dafb" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38bdf8" },
-        { name: "VanilaCSS", icon: <SiCss />, color: "#a632a6" },
+        { name: "Vanilla CSS", icon: <SiCss />, color: "#a632a6" },
       ],
     },
     {

@@ -24,7 +24,6 @@ Your portfolio shows **decent technical execution** but **fails to convey strate
 **Critical Issues:**
 #### 1.1 Hero Section is Generic
 The opening lacks differentiation:
-
 ```
 "Building System That Work" (scramble animation)
 "20-year-old developer focused on JavaScript, backend system and Frontend Architecture..."

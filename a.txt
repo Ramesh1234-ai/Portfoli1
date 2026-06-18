@@ -202,3 +202,6 @@ Steps to integrate
  1. Install external dependencies
  2. Fill image assets with Unsplash stock images you know exist
  3. Use lucide-react icons for svgs or logos if component requires them
+
+<a data-testid="linkElement" href="mailto:hello@tanishaphanbuh.in" target="_self" class="twXk19" aria-label="EMAIL"><img sizes="114px" srcset="https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_114,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg 1x, https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg 2x" id="img_0_comp-is8zz7cl3" src="https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_114,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg" alt="EMAIL" style="object-fit:cover" class="ZK9snE sFiSiq" width="114" height="114"></a>
+evision host Chef Sherie's Instagram who can be contacted at \(\text{agirlfromthehills@gmail.com}\).Harshil Thakur: A po

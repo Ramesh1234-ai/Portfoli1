@@ -7,6 +7,7 @@ const navItems = [
   { label: "Work", id: "work" },
   { label: "Experience", id: "experience" },
   { label: "Activity", id: "Activity" },
+  { label: "Contact", id: "contact" },
 ];
 
 export default function NavDock({ darkMode = false, toggleTheme = () => {} }) {
