@@ -7,6 +7,7 @@ import { useTypewriter } from "../hooks/useTypewriter";
 import { useScramble } from "../hooks/useScramble";
 import { HERO_WORDS } from "../constants/heroConstants";
 import { MagButton } from "./mag";
+import { DARK} from "./Theme";
 import {
   FaLinkedin,
   FaGithub,
@@ -15,13 +16,14 @@ import {
 import { HoverButton } from "./HoverButton";
 import proof from "../assets/proof.avif";
 // AboutSection.jsx
-export function Hero({ theme: T,} = {}) {
+export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
   // Use provided theme or default to DARK
   const theme = T || DARK;
   // Hooks
   const scrambled = useScramble("Building Systems That Work", hovered);
+  const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
     `a final-year B.Tech student focused on building high-performance web applications with React, Node.js, and Express. I enjoy creating interfaces that feel fast and intuitive, where performance isn't an optimization pass`,
     30,
