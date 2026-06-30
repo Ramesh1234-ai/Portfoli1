@@ -1,7 +1,8 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./App.css";
 import App from "./App";
+import { Hero } from "./components/Hero";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

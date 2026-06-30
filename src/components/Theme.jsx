@@ -5,7 +5,7 @@ export const LIGHT = {
   border: "#E2E0D8",
   text: "#1A1916",
   muted: "#6B6860",
-  accent: "#37ff00",
+  accent: "#ff8000",
   accentAlt: "#3B5BDB",
   glow: "rgba(200,98,42,0.15)",
   glowBlue: "rgba(59,91,219,0.12)",

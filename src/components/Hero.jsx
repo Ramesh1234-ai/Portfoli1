@@ -14,7 +14,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { HoverButton } from "./HoverButton";
-import proof from "../assets/proof.avif";
+import proof from "../assets/proof.jpg";
 // AboutSection.jsx
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);

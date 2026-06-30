@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import { Hero } from "./components/Hero";
 import { Experience } from "./components/Experience";
 import { Work } from "./components/Projects";
@@ -7,20 +6,15 @@ import { Skills } from "./components/Skills";
 import { Activity } from "./components/Activity";
 import { Contact } from "./components/contact";
 import { SiLeetcode } from "react-icons/si";
-import {
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import NavDock from "./components/footer";
-function App() {
+import {SocialFlipButton} from "./components/connect";
+export default function App() {
   const [darkMode, setDarkMode] = useState(false);
-
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("theme", !darkMode ? "dark" : "light");
   };
-
   const Separator = ({ className = "" }) => (
     <div
       className={`separator ${className}`}
@@ -43,7 +37,6 @@ function App() {
       {/* Background gradient overlay */}
       <div
         style={{
-          position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
@@ -71,7 +64,7 @@ function App() {
             darkMode
               ? {
                   text: "#e5e7eb",
-                  accent: "#c084fc",
+                  accent: "#ff8000",
                   border: "#2e303a",
                   background: "#1a1a1a",
                   surface: "#222",
@@ -94,24 +87,27 @@ function App() {
             transition: "all 0.3s ease",
           }}
         >
-          <div
+            <div
             style={{
               maxWidth: 1100,
               margin: "0 auto",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              flexWrap: "wrap",
-              gap: "24px",
+              flexWrap: "nowrap",
+              gap: "16px",
             }}
           >
-            <div>
+            <div style={{ minWidth: 0 }}>
               <p
                 style={{
                   color: darkMode ? "#b0b0b0" : "#666",
-                  fontSize: "14px",
+                  fontSize: "clamp(10px, 2.5vw, 14px)",
                   margin: 0,
                   fontWeight: 500,
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                   transition: "color 0.3s ease",
                 }}
               >
@@ -120,143 +116,19 @@ function App() {
               <p
                 style={{
                   color: darkMode ? "#888" : "#999",
-                  fontSize: "12px",
+                  fontSize: "clamp(9px, 2vw, 12px)",
                   margin: "4px 0 0 0",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                   transition: "color 0.3s ease",
                 }}
               >
                 Building systems that scale.
               </p>
             </div>
-
-            <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-              <a
-                href="https://github.com/Rishit-Sinha10"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <FaGithub size={18} />
-              </a>
-              <a
-                href="mailto:Sinharishit04@gmail.com"
-                aria-label="Email"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <FaEnvelope size={18} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/rishit-sinha-6953ab363"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <FaLinkedin size={18} />
-              </a>
-              <a
-                href="https://leetcode.com/u/rizz4566/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LeetCode"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <SiLeetcode size={18} />
-              </a>
+            <div style={{ flexShrink: 0 }}>
+              <SocialFlipButton />
             </div>
           </div>
         </footer>
@@ -264,5 +136,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
